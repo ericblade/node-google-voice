@@ -275,6 +275,16 @@ methods.settings = {
 };
 
 
+methods.getBillingCredit = {
+	handler: function(options) {
+		return {
+			method: 'POST',
+			path: '/settings/billingcredit/',
+			query: options
+		};
+	}
+};
+
 
 exports.Client.prototype.connect=function(method,options,callback){
 	callback = callback || ( options && typeof options == 'function' ? options : noop);
