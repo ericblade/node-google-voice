@@ -256,6 +256,25 @@ methods.cancel = {
 	}
 };
 
+methods.settings = {
+	
+	handler: function(options) {
+		
+		return {
+			
+			method: 'POST',
+			
+			path: '/settings/editGeneralSettings/',
+			
+			query: options
+		
+		};
+	
+	}
+
+};
+
+
 
 exports.Client.prototype.connect=function(method,options,callback){
 	callback = callback || ( options && typeof options == 'function' ? options : noop);
